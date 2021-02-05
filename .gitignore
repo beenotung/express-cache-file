@@ -1,0 +1,13 @@
+# nodejs
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# IDE
+.idea/
+
+# built files
+index.d.ts
+index.js
+index.js.map

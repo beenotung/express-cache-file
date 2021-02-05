@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": [
+    "index.ts"
+  ]
+}
