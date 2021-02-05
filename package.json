@@ -16,7 +16,7 @@
 		"index.*"
 	],
 	"scripts": {
-		"format": "prettier --write index.ts",
+		"format": "prettier --write *.ts",
 		"build": "tsc -p .",
 		"dev": "ts-node-dev examples/server.ts"
 	},
