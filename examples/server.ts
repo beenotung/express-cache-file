@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import { join } from 'path';
-import cacheFile from '../';
+import cacheFile from '../src';
 
 let app = express();
 

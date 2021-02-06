@@ -4,7 +4,7 @@ const BinaryMimeType = 'application/octet-stream';
 const HtmlMimeType = 'text/html';
 const TxtMimeType = 'text/plain';
 
-function getMimeType(file: string, buffer: Buffer) {
+function getMimeType(file: string, buffer: Buffer): Promise<string> {
   return fromBuffer(buffer).then((res) => {
     if (res) return res.mime;
 

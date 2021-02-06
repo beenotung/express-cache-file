@@ -1,7 +1,9 @@
 export type UpdateInterval =
   | undefined
-  | 'immediate' // default
-  | number // ms
+  | false // equivalent to to 'never'
+  | 'never' // default
+  | 'immediate'
+  | number // ms, zero is equivalent to 'immediate'
   | string; // duration format
 
 namespace Interval {
@@ -12,8 +14,8 @@ namespace Interval {
 }
 
 function parseInterval(interval: UpdateInterval): number {
-  if (!interval) return -1;
   if (typeof interval === 'number') return interval;
+  if (!interval) return -1;
 
   const value = parseFloat(interval);
   const unit = interval.replace(value.toString(), '').trim().toLowerCase();

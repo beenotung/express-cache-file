@@ -9,6 +9,4 @@ yarn.lock
 .idea/
 
 # built files
-index.d.ts
-index.js
-index.js.map
+dist/

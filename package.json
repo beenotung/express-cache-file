@@ -10,13 +10,14 @@
 		"in-memory",
 		"express-middleware"
 	],
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"files": [
 		"examples",
 		"index.*"
 	],
 	"scripts": {
-		"format": "prettier --write *.ts",
+		"format": "prettier --write src/*.ts",
 		"build": "tsc -p .",
 		"dev": "ts-node-dev examples/server.ts"
 	},
