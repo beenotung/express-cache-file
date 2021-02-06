@@ -28,12 +28,6 @@ function cacheFile(root: string, options: CacheFileOptions = {}) {
   let readFile = getFsFile(options.readMode);
   readFile = getCacheFile(readFile, cache, options.update || {});
   return function (req: Request, res: Response, next: NextFunction) {
-    console.log({
-      path: req.path,
-      url: req.url,
-      baseUrl: req.baseUrl,
-      originalUrl: req.originalUrl,
-    });
     const file = join(root, req.path);
     readFile(file, (err, content) => {
       if (redirect && err && err.code === 'EISDIR') {
