@@ -5,17 +5,19 @@ export type CacheSize =
   | string; // size format
 
 namespace Size {
-  export const kb = 1024;
-  export const mb = kb * 1024;
-  export const gb = mb * 1024;
-  export const tb = gb * 1024;
-  export const pb = tb * 1024;
+  // reference: https://en.wikipedia.org/wiki/Byte#Units_based_on_powers_of_2
 
-  export const kib = 1000;
-  export const mib = kib * 1000;
-  export const gib = mib * 1000;
-  export const tib = gib * 1000;
-  export const pib = tib * 1000;
+  export const kib = 1024;
+  export const mib = kib * 1024;
+  export const gib = mib * 1024;
+  export const tib = gib * 1024;
+  export const pib = tib * 1024;
+
+  export const kb = 1000;
+  export const mb = kb * 1000;
+  export const gb = mb * 1000;
+  export const tb = gb * 1000;
+  export const pb = tb * 1000;
 }
 
 function parseSize(size: CacheSize): number {
