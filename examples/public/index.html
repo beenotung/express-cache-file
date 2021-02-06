@@ -1,1 +1,27 @@
-index page
+<h1>index page</h1>
+
+<h2>static files</h2>
+<a href="/">/</a>
+<br>
+<a href="/index.html">/index.html</a>
+<br>
+<a href="/user">/user</a>
+<br>
+<a href="/user/index.html">/user/index.html</a>
+<br>
+<a href="/user/page.txt">/user/page.txt</a>
+
+<h2>not allowed paths</h2>
+<a href="/user/.gitignore">/user/.gitignore</a>
+<br>
+<a href="../../.git/config">../../.git/config</a>
+<br>
+<a href="../../package.json">../../package.json</a>
+
+<h2>apis</h2>
+<a href="/user">/user (should be overriden by the static files)</a>
+<br>
+<a href="/user/123">/user/123</a>
+
+<h3>non-existing paths</h3>
+<a href="/404">/404</a>
