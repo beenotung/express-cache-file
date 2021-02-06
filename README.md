@@ -1,6 +1,6 @@
 # express-cache-file
 
-Cache static files in server memory.
+Express middleware to cache static files in server memory.
 
 [![npm Package Version](https://img.shields.io/npm/v/express-cache-file.svg?maxAge=3600)](https://www.npmjs.com/package/express-cache-file)
 
