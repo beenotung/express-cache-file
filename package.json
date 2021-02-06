@@ -1,6 +1,6 @@
 {
   "name": "express-cache-file",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Express middleware to cache static files in server memory",
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
