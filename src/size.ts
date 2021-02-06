@@ -41,7 +41,7 @@ function parseSize(size: CacheSize): number {
   if (unit.startsWith('t')) return value * Size.tb;
   if (unit.startsWith('p')) return value * Size.pb;
 
-  if (value < 1024) return value * Size.mb;
+  if (value < 1000) return value * Size.mb;
 
   return value;
 }
