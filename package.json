@@ -14,7 +14,8 @@
   "types": "dist/index.d.ts",
   "files": [
     "examples",
-    "index.*"
+    "src",
+    "dist"
   ],
   "scripts": {
     "format": "prettier --write {src,examples}/*.ts",
