@@ -69,7 +69,7 @@ export type UpdateOptions = {
 
 export type UpdateMode =
   | 'cache_first' // default
-  | 'wait';
+  | 'wait'
 
 export type ReadMode =
   | undefined
