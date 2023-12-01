@@ -18,7 +18,7 @@ export type CacheFileOptions = {
   redirect?: boolean; // redirect '/' to 'index.html', default true
 };
 
-function cacheFile(root: string, options: CacheFileOptions = {}) {
+export function cacheFile(root: string, options: CacheFileOptions = {}) {
   const redirect = options.redirect ?? true;
   const cache: Cache = {
     capacity: parseSize(options.cacheSize),

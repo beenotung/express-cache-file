@@ -26,7 +26,7 @@ yarn install express-cache-file
 
 ## Typescript Signature
 ```typescript
-function cacheFile(root: string, options?: CacheFileOptions): (req, res, next) => void
+export function cacheFile(root: string, options?: CacheFileOptions): (req, res, next) => void
 
 export default cacheFile
 
