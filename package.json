@@ -19,6 +19,7 @@
   "scripts": {
     "format": "prettier --write {src,examples}/*.ts",
     "clean": "rimraf dist",
+    "test": "tsc -p . --noEmit",
     "tsc": "tsc -p .",
     "build": "run-s clean tsc",
     "dev": "ts-node-dev examples/server.ts"
