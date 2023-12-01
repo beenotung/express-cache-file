@@ -22,6 +22,29 @@ You can install this package with `npm`, `pnpm`, `yarn` or `slnpm`
 npm install express-cache-file
 ```
 
+## Usage Example
+
+```typescript
+import cacheFile from 'express-cache-file'
+import express from 'express'
+
+let app = express()
+
+app.use(
+  cacheFile('public', {
+    cacheSize: '50mb',
+    update: {
+      expire: '5 seconds',
+      mode: 'cache_first',
+    },
+  }),
+)
+
+app.listen(8100, () => {
+  console.log('listening on http://localhost:8100')
+})
+```
+
 ## Typescript Signature
 
 ```typescript
