@@ -6,7 +6,7 @@ export type Content = {
 
 export type Cache = {
   capacity?: number; // bytes
-  unsedSize: number; // bytes
+  usedSize: number; // bytes
   expireInterval?: number;
   files: Record<string, Content>;
 };

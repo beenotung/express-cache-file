@@ -22,7 +22,7 @@ function cacheFile(root: string, options: CacheFileOptions = {}) {
   const redirect = options.redirect ?? true;
   const cache: Cache = {
     capacity: parseSize(options.cacheSize),
-    unsedSize: 0,
+    usedSize: 0,
     files: {},
   };
   let readFile = getFsFile(options.readMode);

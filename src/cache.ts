@@ -47,7 +47,7 @@ function getCacheFile(
 function removeFromCache(cache: Cache, file: string, item = cache.files[file]) {
   delete cache.files[file];
   if (item) {
-    cache.unsedSize -= item.buffer.byteLength;
+    cache.usedSize -= item.buffer.byteLength;
   }
 }
 
@@ -55,27 +55,27 @@ function saveToCache(cache: Cache, file: string, content: Content) {
   removeFromCache(cache, file);
   if (checkCacheSize(cache, content.buffer.byteLength)) {
     cache.files[file] = content;
-    cache.unsedSize += content.buffer.byteLength;
+    cache.usedSize += content.buffer.byteLength;
   }
 }
 
 function checkCacheSize(cache: Cache, sizeNeeded: number): boolean {
   if (!cache.capacity) return true;
 
-  if (cache.capacity >= cache.unsedSize + sizeNeeded) {
+  if (cache.capacity >= cache.usedSize + sizeNeeded) {
     return true;
   }
 
   const entries = Object.entries(cache.files);
   for (let i = 0; i < entries.length; i++) {
-    if (cache.capacity >= cache.unsedSize + sizeNeeded) {
+    if (cache.capacity >= cache.usedSize + sizeNeeded) {
       return true;
     }
     let entry = entries[i];
     removeFromCache(cache, entry[0], entry[1]);
   }
 
-  return cache.capacity >= cache.unsedSize + sizeNeeded;
+  return cache.capacity >= cache.usedSize + sizeNeeded;
 }
 
 export default getCacheFile;
