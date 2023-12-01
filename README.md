@@ -76,7 +76,7 @@ Format: [value][unit]
 
 Remarks:
 - The unit is case-insensitive.
-- The sapce between value and unit is optional.
+- The space between value and unit is optional.
 - When the unit is not specified, the value is treated as second if smaller than 1000, otherwise treated as ms.
 
 Examples:
@@ -104,7 +104,7 @@ Format: [value][unit]
 
 Remarks:
 - The unit is case-insensitive.
-- The sapce between value and unit is optional.
+- The space between value and unit is optional.
 - When the unit is not specified, the value is treated as MB if smaller than 1000, otherwise treated as byte.
 
 ## License
