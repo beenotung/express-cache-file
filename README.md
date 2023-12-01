@@ -15,13 +15,10 @@ This is a simple package without external dependencies.
 
 ## Installation
 
+You can install this package with `npm`, `pnpm`, `yarn` or `slnpm`
+
 ```bash
-# use official node.js package manager
 npm install express-cache-file
-# or
-pnpm install express-cache-file
-# or
-yarn install express-cache-file
 ```
 
 ## Typescript Signature
